@@ -43,7 +43,7 @@ def cs_classes(post):
     >>> cs_classes("What are some good CS upper division courses? I was thinking about CS 161 or CS 169a")
     True
     """
-    return bool(re.search(__________, post))
+    return bool(re.search(r"(CS|cs)\s?\d+[A|a|B|b|C|c]?", post))
 
 
 import re
@@ -60,7 +60,7 @@ def match_time(text):
     >>> match_time("At 2:00 I pinged 127.0.0.1:80.")
     ['2:00']
     """
-    return re.findall(__________, text)
+    return re.findall(r"\b[0|1|2]?\d[:][0|1|2|3|4|5]\d\w?\w?", text)
 
 
 import re
